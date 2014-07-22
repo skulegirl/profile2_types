@@ -91,7 +91,7 @@ function profile2_types_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textarea',
-      'weight' => 9,
+      'weight' => 3,
     ),
     'widget_type' => 'text_textarea',
   );
@@ -177,7 +177,7 @@ function profile2_types_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 1,
     ),
     'widget_type' => 'text_textfield',
   );
@@ -260,19 +260,21 @@ function profile2_types_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 9,
+      'weight' => 2,
     ),
     'widget_type' => 'email_textfield',
   );
 
-  // Exported field_instance: 'profile2-affiliate_info-field_affiliate_tos'
-  $field_instances['profile2-affiliate_info-field_affiliate_tos'] = array(
+  // Exported field_instance: 'profile2-affiliate_info-field_affiliate_terms_of_service'
+  $field_instances['profile2-affiliate_info-field_affiliate_terms_of_service'] = array(
     'bundle' => 'affiliate_info',
     'default_value' => array(
       0 => array(
-        'value' => '',
+        'value' => 0,
       ),
     ),
+    'default_value_function' => '',
+    'default_value_php' => '',
     'deleted' => 0,
     'description' => 'You must agree to the affiliate terms of service. Note that these are different than the general terms of service for Boondockers Welcome members.',
     'display' => array(
@@ -281,116 +283,37 @@ function profile2_types_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 2,
-      ),
-      'email_html' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_integer',
-        'weight' => 31,
-      ),
-      'email_plain' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_integer',
-        'weight' => 31,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_integer',
-        'weight' => 31,
-      ),
-      'rss' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_integer',
-        'weight' => 31,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_integer',
-        'weight' => 31,
-      ),
-      'token' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_integer',
-        'weight' => 31,
+        'weight' => 21,
       ),
     ),
     'entity_type' => 'profile2',
-    'field_name' => 'field_affiliate_tos',
+    'exclude_cv' => 0,
+    'field_name' => 'field_affiliate_terms_of_service',
     'label' => 'Terms of Service',
     'required' => 1,
     'settings' => array(
       'exclude_cv' => FALSE,
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
       'user_register_form' => FALSE,
     ),
-    'weight' => 31,
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'default_value_php' => NULL,
+        'display_label' => 0,
       ),
-      'type' => 'options_buttons',
-      'weight' => 31,
+      'type' => 'options_onoff',
+      'weight' => 5,
     ),
-    'widget_type' => 'optionwidgets_buttons',
   );
 
   // Exported field_instance: 'profile2-affiliate_info-field_affiliate_website_url'
   $field_instances['profile2-affiliate_info-field_affiliate_website_url'] = array(
     'bundle' => 'affiliate_info',
-    'default_value' => array(
-      0 => array(
-        'url' => '',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The URL of your blog or website that you wish to link from. If you do not have a website, leave this blank, but please explain in the "comments" section below how you plan to sign up members as an affiliate. If you have multiple sites or blogs that you wish to link from, please put the primary one here, and include other sites in the "comments" field below. ',
+    'description' => 'The URL of your blog or website that you wish to link from. Please include http:// at the beginning. 
+<p>
+If you do not have a website, leave this blank, but please explain in the "comments" section below how you plan to sign up members as an affiliate. If you have multiple sites or blogs that you wish to link from, please put the primary one here, and include other sites in the "comments" field below. ',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -449,6 +372,8 @@ function profile2_types_field_default_field_instances() {
     'settings' => array(
       'attributes' => array(
         'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
         'rel' => '',
         'target' => 'default',
         'title' => '',
@@ -458,24 +383,57 @@ function profile2_types_field_default_field_instances() {
       ),
       'enable_tokens' => 0,
       'exclude_cv' => FALSE,
+      'exclude_cv1' => 0,
+      'rel_remove' => 'default',
       'title' => 'none',
+      'title_label_use_field_label' => 0,
       'title_maxlength' => 128,
       'title_value' => '',
-      'url' => 0,
+      'url' => 'optional',
       'user_register_form' => FALSE,
-      'validate_url' => 1,
+      'validate_url' => 0,
     ),
     'weight' => 8,
     'widget' => array(
       'active' => 0,
       'module' => 'link',
-      'settings' => array(
-        'default_value_php' => NULL,
-      ),
+      'settings' => array(),
       'type' => 'link_field',
-      'weight' => 8,
+      'weight' => 2,
     ),
     'widget_type' => 'link',
+  );
+
+  // Exported field_instance: 'profile2-affiliate_info-field_intro_text'
+  $field_instances['profile2-affiliate_info-field_intro_text'] = array(
+    'bundle' => 'affiliate_info',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'markup',
+        'settings' => array(),
+        'type' => 'markup_default',
+        'weight' => 20,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'exclude_cv' => 0,
+    'field_name' => 'field_intro_text',
+    'label' => 'intro_text',
+    'required' => 0,
+    'settings' => array(
+      'exclude_cv' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'markup',
+      'settings' => array(),
+      'type' => 'markup',
+      'weight' => 0,
+    ),
   );
 
   // Exported field_instance: 'profile2-boondocking_available-field_ba_access_road_conditions'
@@ -780,11 +738,9 @@ Please do not check this option if you are simply going to be away and unavailab
   // Exported field_instance: 'profile2-boondocking_available-field_ba_hookups'
   $field_instances['profile2-boondocking_available-field_ba_hookups'] = array(
     'bundle' => 'boondocking_available',
-    'default_value' => array(
-      0 => array(
-        'value' => '',
-      ),
-    ),
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'default_value_php' => '',
     'deleted' => 0,
     'description' => 'Indicate what hookups you have available on your property, if any.',
     'display' => array(
@@ -839,6 +795,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_ba_hookups',
     'label' => 'Hookups Available',
     'required' => 0,
@@ -849,11 +806,9 @@ Please do not check this option if you are simply going to be away and unavailab
     ),
     'weight' => 10,
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'default_value_php' => NULL,
-      ),
+      'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 8,
     ),
@@ -950,11 +905,9 @@ Please do not check this option if you are simply going to be away and unavailab
   // Exported field_instance: 'profile2-boondocking_available-field_ba_max_nights'
   $field_instances['profile2-boondocking_available-field_ba_max_nights'] = array(
     'bundle' => 'boondocking_available',
-    'default_value' => array(
-      0 => array(
-        'value' => '',
-      ),
-    ),
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'default_value_php' => '',
     'deleted' => 0,
     'description' => 'The maximum number of nights you\'re willing to accommodate a guest boondocker.',
     'display' => array(
@@ -1009,6 +962,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_ba_max_nights',
     'label' => 'Max Nights',
     'required' => 1,
@@ -1019,11 +973,9 @@ Please do not check this option if you are simply going to be away and unavailab
     ),
     'weight' => 8,
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'default_value_php' => NULL,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 6,
     ),
@@ -1033,11 +985,9 @@ Please do not check this option if you are simply going to be away and unavailab
   // Exported field_instance: 'profile2-boondocking_available-field_ba_max_rv_length_int'
   $field_instances['profile2-boondocking_available-field_ba_max_rv_length_int'] = array(
     'bundle' => 'boondocking_available',
-    'default_value' => array(
-      0 => array(
-        'value' => '',
-      ),
-    ),
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'default_value_php' => '',
     'deleted' => 0,
     'description' => 'What size of RV can park on your property?',
     'display' => array(
@@ -1122,6 +1072,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_ba_max_rv_length_int',
     'label' => 'Max RV Length',
     'required' => 1,
@@ -1135,11 +1086,9 @@ Please do not check this option if you are simply going to be away and unavailab
     ),
     'weight' => 7,
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'default_value_php' => NULL,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 5,
     ),
@@ -1149,11 +1098,9 @@ Please do not check this option if you are simply going to be away and unavailab
   // Exported field_instance: 'profile2-boondocking_available-field_ba_number_of_spots'
   $field_instances['profile2-boondocking_available-field_ba_number_of_spots'] = array(
     'bundle' => 'boondocking_available',
-    'default_value' => array(
-      0 => array(
-        'value' => '',
-      ),
-    ),
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'default_value_php' => '',
     'deleted' => 0,
     'description' => 'Enter the number of guests\' RVs you can accommodate on your property If you do not have any spots available, please check the "I prefer to not provide boondocking at this time" checkbox at the top of this page. ',
     'display' => array(
@@ -1238,6 +1185,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_ba_number_of_spots',
     'label' => 'Number of Spots',
     'required' => 1,
@@ -1251,11 +1199,9 @@ Please do not check this option if you are simply going to be away and unavailab
     ),
     'weight' => 6,
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'default_value_php' => NULL,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 4,
     ),
@@ -1265,11 +1211,9 @@ Please do not check this option if you are simply going to be away and unavailab
   // Exported field_instance: 'profile2-boondocking_available-field_ba_pets_welcome'
   $field_instances['profile2-boondocking_available-field_ba_pets_welcome'] = array(
     'bundle' => 'boondocking_available',
-    'default_value' => array(
-      0 => array(
-        'value' => '',
-      ),
-    ),
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'default_value_php' => '',
     'deleted' => 0,
     'description' => 'Are pets welcome at your location?',
     'display' => array(
@@ -1324,6 +1268,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_ba_pets_welcome',
     'label' => 'Pets Welcome',
     'required' => 1,
@@ -1334,11 +1279,9 @@ Please do not check this option if you are simply going to be away and unavailab
     ),
     'weight' => 15,
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'default_value_php' => NULL,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 14,
     ),
@@ -1420,6 +1363,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_ba_photo',
     'label' => 'Photos of this Boondocking Location',
     'required' => 0,
@@ -1427,20 +1371,20 @@ Please do not check this option if you are simply going to be away and unavailab
       'alt_field' => 0,
       'default_image' => 0,
       'exclude_cv' => FALSE,
-      'file_directory' => 'users/[user]/images',
+      'file_directory' => 'users/[profile2:user]/images',
       'file_extensions' => 'png gif jpg jpeg',
       'filefield_paths' => array(
         'active_updating' => 0,
         'file_name' => array(
           'options' => array(
-            'pathauto' => FALSE,
+            'pathauto' => 0,
             'transliterate' => 0,
           ),
           'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
         ),
         'file_path' => array(
           'options' => array(
-            'pathauto' => FALSE,
+            'pathauto' => 0,
             'transliterate' => 0,
           ),
           'value' => 'users/[profile2:user]/images',
@@ -1471,11 +1415,9 @@ Please do not check this option if you are simply going to be away and unavailab
   // Exported field_instance: 'profile2-boondocking_available-field_ba_pullthrough_spot'
   $field_instances['profile2-boondocking_available-field_ba_pullthrough_spot'] = array(
     'bundle' => 'boondocking_available',
-    'default_value' => array(
-      0 => array(
-        'value' => '',
-      ),
-    ),
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'default_value_php' => '',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -1530,6 +1472,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_ba_pullthrough_spot',
     'label' => 'Pull Through Parking Available',
     'required' => 1,
@@ -1540,11 +1483,9 @@ Please do not check this option if you are simply going to be away and unavailab
     ),
     'weight' => 9,
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'default_value_php' => NULL,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 7,
     ),
@@ -1554,11 +1495,9 @@ Please do not check this option if you are simply going to be away and unavailab
   // Exported field_instance: 'profile2-boondocking_available-field_ba_slideout_awning'
   $field_instances['profile2-boondocking_available-field_ba_slideout_awning'] = array(
     'bundle' => 'boondocking_available',
-    'default_value' => array(
-      0 => array(
-        'value' => '',
-      ),
-    ),
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'default_value_php' => '',
     'deleted' => 0,
     'description' => 'Can guests put out their slideouts or awnings?',
     'display' => array(
@@ -1613,6 +1552,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_ba_slideout_awning',
     'label' => 'Slideouts/Awnings Allowed',
     'required' => 1,
@@ -1623,11 +1563,9 @@ Please do not check this option if you are simply going to be away and unavailab
     ),
     'weight' => 11,
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'default_value_php' => NULL,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 10,
     ),
@@ -1723,11 +1661,9 @@ Please do not check this option if you are simply going to be away and unavailab
   // Exported field_instance: 'profile2-boondocking_available-field_ba_wifi_available'
   $field_instances['profile2-boondocking_available-field_ba_wifi_available'] = array(
     'bundle' => 'boondocking_available',
-    'default_value' => array(
-      0 => array(
-        'value' => '',
-      ),
-    ),
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'default_value_php' => '',
     'deleted' => 0,
     'description' => 'Can you provide wireless internet for guests?',
     'display' => array(
@@ -1782,6 +1718,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_ba_wifi_available',
     'label' => 'Wifi Available',
     'required' => 1,
@@ -1792,11 +1729,9 @@ Please do not check this option if you are simply going to be away and unavailab
     ),
     'weight' => 17,
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'default_value_php' => NULL,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 15,
     ),
@@ -1806,11 +1741,9 @@ Please do not check this option if you are simply going to be away and unavailab
   // Exported field_instance: 'profile2-boondocking_available-field_barbecues_allowed'
   $field_instances['profile2-boondocking_available-field_barbecues_allowed'] = array(
     'bundle' => 'boondocking_available',
-    'default_value' => array(
-      0 => array(
-        'value' => '',
-      ),
-    ),
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'default_value_php' => '',
     'deleted' => 0,
     'description' => 'Can guests use a barbecue?',
     'display' => array(
@@ -1865,6 +1798,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_barbecues_allowed',
     'label' => 'Barbecues Allowed',
     'required' => 1,
@@ -1875,11 +1809,9 @@ Please do not check this option if you are simply going to be away and unavailab
     ),
     'weight' => 14,
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'default_value_php' => NULL,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 13,
     ),
@@ -1889,101 +1821,7 @@ Please do not check this option if you are simply going to be away and unavailab
   // Exported field_instance: 'profile2-boondocking_available-field_boondock_location'
   $field_instances['profile2-boondocking_available-field_boondock_location'] = array(
     'bundle' => 'boondocking_available',
-    'default_value' => array(
-      0 => array(
-        'country' => 'us',
-        'city' => '',
-        'province' => '',
-        'postal_code' => '',
-        'cck_preview_in_progress' => TRUE,
-        'location_settings' => array(
-          'display' => array(
-            'hide' => array(
-              'additional' => 'additional',
-              'city' => 0,
-              'coords' => 'coords',
-              'country' => 0,
-              'country_name' => 'country_name',
-              'locpick' => 'locpick',
-              'map_link' => 'map_link',
-              'name' => 'name',
-              'postal_code' => 'postal_code',
-              'province' => 0,
-              'province_name' => 'province_name',
-              'street' => 'street',
-            ),
-          ),
-          'form' => array(
-            'fields' => array(
-              'additional' => array(
-                'collect' => 0,
-                'default' => '',
-                'weight' => -97,
-              ),
-              'cck_preview_in_progress' => array(
-                'default' => TRUE,
-              ),
-              'city' => array(
-                'collect' => 1,
-                'default' => '',
-                'weight' => -96,
-              ),
-              'country' => array(
-                'collect' => 1,
-                'default' => 'us',
-                'weight' => -100,
-              ),
-              'delete_location' => array(
-                'default' => FALSE,
-                'nodiff' => TRUE,
-              ),
-              'is_primary' => array(
-                'default' => 0,
-              ),
-              'latitude' => array(
-                'default' => 0,
-              ),
-              'lid' => array(
-                'default' => FALSE,
-              ),
-              'locpick' => array(
-                'collect' => 0,
-                'default' => FALSE,
-                'nodiff' => TRUE,
-                'weight' => -93,
-              ),
-              'longitude' => array(
-                'default' => 0,
-              ),
-              'name' => array(
-                'collect' => 0,
-                'default' => '',
-                'weight' => -99,
-              ),
-              'postal_code' => array(
-                'collect' => 1,
-                'default' => '',
-                'weight' => -94,
-              ),
-              'province' => array(
-                'collect' => 1,
-                'default' => '',
-                'weight' => -95,
-                'widget' => 'autocomplete',
-              ),
-              'source' => array(
-                'default' => 0,
-              ),
-              'street' => array(
-                'collect' => 0,
-                'default' => '',
-                'weight' => -98,
-              ),
-            ),
-          ),
-        ),
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Tell us where your boondocking location is. Exact location details cannot be entered for your privacy, but a general location (your city and state and possibly your zip code) will help other users determine if your boondocking location is on or close to their route. In larger cities a zip or postal code will help users narrow down your location considerably.
 ',
@@ -2025,6 +1863,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_boondock_location',
     'label' => 'Your Location',
     'required' => 1,
@@ -2036,9 +1875,7 @@ Please do not check this option if you are simply going to be away and unavailab
     'widget' => array(
       'active' => 0,
       'module' => 'location_cck',
-      'settings' => array(
-        'default_value_php' => NULL,
-      ),
+      'settings' => array(),
       'type' => 'location',
       'weight' => 3,
     ),
@@ -2048,11 +1885,9 @@ Please do not check this option if you are simply going to be away and unavailab
   // Exported field_instance: 'profile2-boondocking_available-field_generators_allowed'
   $field_instances['profile2-boondocking_available-field_generators_allowed'] = array(
     'bundle' => 'boondocking_available',
-    'default_value' => array(
-      0 => array(
-        'value' => '',
-      ),
-    ),
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'default_value_php' => '',
     'deleted' => 0,
     'description' => 'Can guests use generators?',
     'display' => array(
@@ -2107,6 +1942,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_generators_allowed',
     'label' => 'Generators Allowed',
     'required' => 1,
@@ -2117,11 +1953,9 @@ Please do not check this option if you are simply going to be away and unavailab
     ),
     'weight' => 12,
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'default_value_php' => NULL,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 11,
     ),
@@ -2131,11 +1965,9 @@ Please do not check this option if you are simply going to be away and unavailab
   // Exported field_instance: 'profile2-boondocking_available-field_lawn_chairs_allowed'
   $field_instances['profile2-boondocking_available-field_lawn_chairs_allowed'] = array(
     'bundle' => 'boondocking_available',
-    'default_value' => array(
-      0 => array(
-        'value' => '',
-      ),
-    ),
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'default_value_php' => '',
     'deleted' => 0,
     'description' => 'Can guests put out lawn chairs?',
     'display' => array(
@@ -2190,6 +2022,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_lawn_chairs_allowed',
     'label' => 'Lawn Chairs Allowed',
     'required' => 1,
@@ -2200,11 +2033,9 @@ Please do not check this option if you are simply going to be away and unavailab
     ),
     'weight' => 13,
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'default_value_php' => NULL,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 12,
     ),
@@ -2292,7 +2123,7 @@ Please do not check this option if you are simply going to be away and unavailab
         'size' => 60,
       ),
       'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 6,
     ),
     'widget_type' => 'text_textarea',
   );
@@ -2302,7 +2133,7 @@ Please do not check this option if you are simply going to be away and unavailab
     'bundle' => 'profile',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'A user profile built as content.',
+    'description' => 'Give a brief description of yourself for others to see.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -2323,24 +2154,58 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_profile_body',
     'label' => 'Tell us about yourself',
     'required' => 0,
     'settings' => array(
-      'display_summary' => TRUE,
+      'display_summary' => 0,
       'exclude_cv' => FALSE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'type' => 'text_with_summary',
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'rows' => 20,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => -4,
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-profile-field_profile_intro_markup'
+  $field_instances['profile2-profile-field_profile_intro_markup'] = array(
+    'bundle' => 'profile',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'markup',
+        'settings' => array(),
+        'type' => 'markup_default',
+        'weight' => 12,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'exclude_cv' => 0,
+    'field_name' => 'field_profile_intro_markup',
+    'label' => 'profile_intro_markup',
+    'required' => 0,
+    'settings' => array(
+      'exclude_cv' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'markup',
+      'settings' => array(),
+      'type' => 'markup',
+      'weight' => 0,
     ),
   );
 
@@ -2425,7 +2290,7 @@ Please do not check this option if you are simply going to be away and unavailab
         'size' => 60,
       ),
       'type' => 'text_textarea',
-      'weight' => 6,
+      'weight' => 7,
     ),
     'widget_type' => 'text_textarea',
   );
@@ -2508,7 +2373,7 @@ Please do not check this option if you are simply going to be away and unavailab
         'default_value_php' => NULL,
       ),
       'type' => 'options_select',
-      'weight' => 3,
+      'weight' => 4,
     ),
     'widget_type' => 'optionwidgets_select',
   );
@@ -2594,9 +2459,45 @@ Please do not check this option if you are simply going to be away and unavailab
         'size' => 60,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 5,
     ),
     'widget_type' => 'text_textarea',
+  );
+
+  // Exported field_instance: 'profile2-profile-field_user_headline'
+  $field_instances['profile2-profile-field_user_headline'] = array(
+    'bundle' => 'profile',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 13,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'exclude_cv' => 0,
+    'field_name' => 'field_user_headline',
+    'label' => 'One line description of you',
+    'required' => 1,
+    'settings' => array(
+      'exclude_cv' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 191,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
   );
 
   // Exported field_instance: 'profile2-profile-field_user_photo'
@@ -2678,6 +2579,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_user_photo',
     'label' => 'User Photo',
     'required' => 0,
@@ -2685,20 +2587,20 @@ Please do not check this option if you are simply going to be away and unavailab
       'alt_field' => 0,
       'default_image' => 0,
       'exclude_cv' => FALSE,
-      'file_directory' => 'users/[user]/images',
+      'file_directory' => 'users/[profile2:user]/images',
       'file_extensions' => 'png gif jpg jpeg',
       'filefield_paths' => array(
         'active_updating' => 0,
         'file_name' => array(
           'options' => array(
-            'pathauto' => FALSE,
+            'pathauto' => 0,
             'transliterate' => 0,
           ),
           'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
         ),
         'file_path' => array(
           'options' => array(
-            'pathauto' => FALSE,
+            'pathauto' => 0,
             'transliterate' => 0,
           ),
           'value' => 'users/[profile2:user]/images',
@@ -2709,7 +2611,7 @@ Please do not check this option if you are simply going to be away and unavailab
       'max_filesize' => '4M',
       'max_resolution' => '640x480',
       'min_resolution' => '',
-      'title_field' => 1,
+      'title_field' => 0,
       'user_register_form' => FALSE,
     ),
     'weight' => 2,
@@ -2721,7 +2623,7 @@ Please do not check this option if you are simply going to be away and unavailab
         'progress_indicator' => 'bar',
       ),
       'type' => 'image_image',
-      'weight' => 2,
+      'weight' => 3,
     ),
     'widget_type' => 'imagefield_widget',
   );
@@ -2807,7 +2709,7 @@ Please do not check this option if you are simply going to be away and unavailab
         'size' => 60,
       ),
       'type' => 'text_textarea',
-      'weight' => 7,
+      'weight' => 8,
     ),
     'widget_type' => 'text_textarea',
   );
@@ -2891,6 +2793,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_user_your_photos',
     'label' => 'Your Photos',
     'required' => 0,
@@ -2898,20 +2801,20 @@ Please do not check this option if you are simply going to be away and unavailab
       'alt_field' => 0,
       'default_image' => 0,
       'exclude_cv' => FALSE,
-      'file_directory' => 'users/[user]/images',
+      'file_directory' => 'users/[profile2:user]/images',
       'file_extensions' => 'png gif jpg jpeg',
       'filefield_paths' => array(
         'active_updating' => 0,
         'file_name' => array(
           'options' => array(
-            'pathauto' => FALSE,
+            'pathauto' => 0,
             'transliterate' => 0,
           ),
           'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
         ),
         'file_path' => array(
           'options' => array(
-            'pathauto' => FALSE,
+            'pathauto' => 0,
             'transliterate' => 0,
           ),
           'value' => 'users/[profile2:user]/images',
@@ -2934,7 +2837,7 @@ Please do not check this option if you are simply going to be away and unavailab
         'progress_indicator' => 'bar',
       ),
       'type' => 'image_image',
-      'weight' => 8,
+      'weight' => 5,
     ),
     'widget_type' => 'imagefield_widget',
   );
@@ -3020,7 +2923,7 @@ Please do not check this option if you are simply going to be away and unavailab
         'size' => 60,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 4,
     ),
     'widget_type' => 'text_textarea',
   );
@@ -3104,6 +3007,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_user_your_rig_photo',
     'label' => 'Your Rig Photo',
     'required' => 0,
@@ -3111,20 +3015,20 @@ Please do not check this option if you are simply going to be away and unavailab
       'alt_field' => 0,
       'default_image' => 0,
       'exclude_cv' => FALSE,
-      'file_directory' => 'users/[user]/images',
+      'file_directory' => 'users/[profile2:user]/images',
       'file_extensions' => 'png gif jpg jpeg',
       'filefield_paths' => array(
         'active_updating' => 0,
         'file_name' => array(
           'options' => array(
-            'pathauto' => FALSE,
+            'pathauto' => 0,
             'transliterate' => 0,
           ),
           'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
         ),
         'file_path' => array(
           'options' => array(
-            'pathauto' => FALSE,
+            'pathauto' => 0,
             'transliterate' => 0,
           ),
           'value' => 'users/[profile2:user]/images',
@@ -3135,7 +3039,7 @@ Please do not check this option if you are simply going to be away and unavailab
       'max_filesize' => '4M',
       'max_resolution' => '640x480',
       'min_resolution' => '',
-      'title_field' => 1,
+      'title_field' => 0,
       'user_register_form' => FALSE,
     ),
     'weight' => 4,
@@ -3147,14 +3051,13 @@ Please do not check this option if you are simply going to be away and unavailab
         'progress_indicator' => 'bar',
       ),
       'type' => 'image_image',
-      'weight' => 4,
+      'weight' => 5,
     ),
     'widget_type' => 'imagefield_widget',
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('A user profile built as content.');
   t('Access Road Conditions');
   t('Are pets welcome at your location?');
   t('Availability');
@@ -3173,6 +3076,7 @@ Please do not check this option if you are simply going to be away and unavailab
   t('Enter the number of guests\' RVs you can accommodate on your property If you do not have any spots available, please check the "I prefer to not provide boondocking at this time" checkbox at the top of this page. ');
   t('Favorite Boondocking Locations');
   t('Generators Allowed');
+  t('Give a brief description of yourself for others to see.');
   t('Give a short description of your boondocking location.
 <p>
 ');
@@ -3186,6 +3090,7 @@ Please do not check this option if you are simply going to be away and unavailab
   t('Max RV Length');
   t('Name');
   t('Number of Spots');
+  t('One line description of you');
   t('Optionally add up to 5 photos of your boondocking location or of the attractions others may want to visit in your area.');
   t('Optionally, include a list of local attractions that might be of interest to guests staying at your place.');
   t('Pets Welcome');
@@ -3204,7 +3109,9 @@ Please do not check this option if you are simply going to be away and unavailab
   t('Tell us where your boondocking location is. Exact location details cannot be entered for your privacy, but a general location (your city and state and possibly your zip code) will help other users determine if your boondocking location is on or close to their route. In larger cities a zip or postal code will help users narrow down your location considerably.
 ');
   t('Terms of Service');
-  t('The URL of your blog or website that you wish to link from. If you do not have a website, leave this blank, but please explain in the "comments" section below how you plan to sign up members as an affiliate. If you have multiple sites or blogs that you wish to link from, please put the primary one here, and include other sites in the "comments" field below. ');
+  t('The URL of your blog or website that you wish to link from. Please include http:// at the beginning. 
+<p>
+If you do not have a website, leave this blank, but please explain in the "comments" section below how you plan to sign up members as an affiliate. If you have multiple sites or blogs that you wish to link from, please put the primary one here, and include other sites in the "comments" field below. ');
   t('The maximum number of nights you\'re willing to accommodate a guest boondocker.');
   t('User Photo');
   t('What size of RV can park on your property?');
@@ -3220,7 +3127,9 @@ Please do not check this option if you are simply going to be away and unavailab
   t('Your Rig Photo');
   t('affiliate website');
   t('comments');
+  t('intro_text');
   t('paypal account email address');
+  t('profile_intro_markup');
 
   return $field_instances;
 }

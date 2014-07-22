@@ -24,7 +24,7 @@ function profile2_types_default_profile2_type() {
     "type" : "affiliate_info",
     "label" : "Affiliate Info",
     "weight" : "0",
-    "data" : null
+    "data" : { "registration" : 0, "use_page" : 0 }
   }');
   $items['boondocking_available'] = entity_import('profile2_type', '{
     "userCategory" : true,

@@ -96,12 +96,43 @@ function profile2_types_field_default_field_bases() {
     'locked' => 0,
     'module' => 'email',
     'settings' => array(
+      'profile2_private' => FALSE,
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'email',
     'type_name' => 'affiliate_info',
+  );
+
+  // Exported field_base: 'field_affiliate_terms_of_service'
+  $field_bases['field_affiliate_terms_of_service'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_affiliate_terms_of_service',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => 'I agree to the <a href="/affiliate-terms-of-service" target="_blank">affiliate terms of service</a>',
+      ),
+      'allowed_values_function' => '',
+      'allowed_values_php' => '',
+      'profile2_private' => 0,
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
   );
 
   // Exported field_base: 'field_affiliate_tos'
@@ -128,9 +159,10 @@ function profile2_types_field_default_field_bases() {
       'max' => '',
       'min' => '',
       'prefix' => '',
+      'profile2_private' => 0,
       'suffix' => '',
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'list_integer',
@@ -158,12 +190,13 @@ function profile2_types_field_default_field_bases() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'profile2_private' => 0,
       'title' => 'optional',
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'link_field',
@@ -328,7 +361,7 @@ function profile2_types_field_default_field_bases() {
       'allowed_values_function' => '',
       'allowed_values_php' => '',
       'legacy_values' => array(),
-      'profile2_private' => FALSE,
+      'profile2_private' => 0,
       'text_processing' => 0,
       'views_base_columns' => array(),
       'views_base_table' => 0,
@@ -400,7 +433,7 @@ function profile2_types_field_default_field_bases() {
       'allowed_values_function' => '',
       'allowed_values_php' => '',
       'legacy_values' => array(),
-      'profile2_private' => FALSE,
+      'profile2_private' => 0,
       'text_processing' => 0,
       'views_base_columns' => array(),
       'views_base_table' => 0,
@@ -439,9 +472,10 @@ function profile2_types_field_default_field_bases() {
       'max' => '',
       'min' => '',
       'prefix' => '',
+      'profile2_private' => 0,
       'suffix' => '',
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'list_integer',
@@ -481,9 +515,10 @@ function profile2_types_field_default_field_bases() {
       'max' => '',
       'min' => '',
       'prefix' => '',
+      'profile2_private' => 0,
       'suffix' => '',
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'list_integer',
@@ -513,9 +548,10 @@ function profile2_types_field_default_field_bases() {
       'allowed_values_function' => '',
       'allowed_values_php' => '',
       'legacy_values' => array(),
+      'profile2_private' => 0,
       'text_processing' => 0,
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'list_text',
@@ -552,7 +588,7 @@ function profile2_types_field_default_field_bases() {
       'profile2_private' => 0,
       'uri_scheme' => 'public',
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'image',
@@ -582,9 +618,10 @@ function profile2_types_field_default_field_bases() {
       'allowed_values_function' => '',
       'allowed_values_php' => '',
       'legacy_values' => array(),
+      'profile2_private' => 0,
       'text_processing' => 0,
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'list_text',
@@ -614,9 +651,10 @@ function profile2_types_field_default_field_bases() {
       'allowed_values_function' => '',
       'allowed_values_php' => '',
       'legacy_values' => array(),
+      'profile2_private' => 0,
       'text_processing' => 0,
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'list_text',
@@ -681,9 +719,10 @@ function profile2_types_field_default_field_bases() {
       'allowed_values_function' => '',
       'allowed_values_php' => '',
       'legacy_values' => array(),
+      'profile2_private' => 0,
       'text_processing' => 0,
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'list_text',
@@ -713,9 +752,10 @@ function profile2_types_field_default_field_bases() {
       'allowed_values_function' => '',
       'allowed_values_php' => '',
       'legacy_values' => array(),
+      'profile2_private' => 0,
       'text_processing' => 0,
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'list_text',
@@ -802,8 +842,9 @@ function profile2_types_field_default_field_bases() {
           ),
         ),
       ),
+      'profile2_private' => 0,
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'location',
@@ -833,9 +874,10 @@ function profile2_types_field_default_field_bases() {
       'allowed_values_function' => '',
       'allowed_values_php' => '',
       'legacy_values' => array(),
+      'profile2_private' => 0,
       'text_processing' => 1,
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'list_text',
@@ -877,6 +919,39 @@ function profile2_types_field_default_field_bases() {
     'type_name' => 'profile',
   );
 
+  // Exported field_base: 'field_intro_text'
+  $field_bases['field_intro_text'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_intro_text',
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'markup',
+    'settings' => array(
+      'markup' => array(
+        'format' => 3,
+        'value' => '<p>Earn money by telling others about Boondockers Welcome.  Become an affiliate (it\'s free and easy) and earn money by mentioning our site on your web site, newsletter, blog, or even in emails. </p>
+
+<p>Each time you refer a new member, we will pay you 10% of the sale of the membership. That means between $2 and $5 for each referral, depending on the membership they purchase. Payments will be made via Paypal after the end of each month, so you\'ll need to sign up for a <a href="https://www.paypal.com" target="_blank">paypal account</a>, if you don\'t already have one, before completing this affiliate application. Note that the affiliate commission will NOT be paid if you buy a membership for yourself.</p>
+
+<p>Once you have signed up, you can login and go to the "Affiliate Center" under "My Account". From there, you can get links and banners to refer others to our site. You will be credited for any memberships that are purchased up to 6 months after first accessing Boondockers Welcome through one of your affiliate links. You can also log in at any time to check how many sales you have referred.</p>
+
+<?php global $user; if (!$user->uid): ?>
+<p>
+<strong><em>Already a member of Boondockers Welcome? <a href="/user/login?destination=user/become-an-affiliate">Sign in first</a> so that you can tie your affiliate account to your existing account and re-use the same username and email address.</em></strong></p>
+<?php endif; ?>',
+      ),
+      'profile2_private' => 0,
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'markup',
+  );
+
   // Exported field_base: 'field_lawn_chairs_allowed'
   $field_bases['field_lawn_chairs_allowed'] = array(
     'active' => 1,
@@ -900,9 +975,10 @@ function profile2_types_field_default_field_bases() {
       'allowed_values_function' => '',
       'allowed_values_php' => '',
       'legacy_values' => array(),
+      'profile2_private' => 0,
       'text_processing' => 0,
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'list_text',
@@ -958,10 +1034,11 @@ function profile2_types_field_default_field_bases() {
     'required' => 0,
     'settings' => array(
       'display_summary' => TRUE,
+      'profile2_private' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'text_with_summary',
@@ -974,6 +1051,34 @@ function profile2_types_field_default_field_bases() {
       'type' => 'text_textarea_with_summary',
       'weight' => -4,
     ),
+  );
+
+  // Exported field_base: 'field_profile_intro_markup'
+  $field_bases['field_profile_intro_markup'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_profile_intro_markup',
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'markup',
+    'settings' => array(
+      'markup' => array(
+        'format' => 2,
+        'value' => 'Enter information about yourself for other members to see. This information will be used by them when determining whether to allow you to boondock on their property, or when they\'re searching for boondocking locations offered by like-minded people. Tell us all about yourself!
+<p>
+An asterisk (*) marks required fields; all others are optional.
+<p>
+Note that changes will only take effect after clicking the "Save" button at the bottom of the page.',
+      ),
+      'profile2_private' => 0,
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'markup',
   );
 
   // Exported field_base: 'field_skills_to_share'
@@ -1082,6 +1187,38 @@ function profile2_types_field_default_field_bases() {
     'type_name' => 'profile',
   );
 
+  // Exported field_base: 'field_user_headline'
+  $field_bases['field_user_headline'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_user_headline',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+      'profile2_private' => 0,
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_user_photo'
   $field_bases['field_user_photo'] = array(
     'active' => 1,
@@ -1112,7 +1249,7 @@ function profile2_types_field_default_field_bases() {
       'profile2_private' => 0,
       'uri_scheme' => 'public',
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'image',
@@ -1184,7 +1321,7 @@ function profile2_types_field_default_field_bases() {
       'profile2_private' => 0,
       'uri_scheme' => 'public',
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'image',
@@ -1256,7 +1393,7 @@ function profile2_types_field_default_field_bases() {
       'profile2_private' => 0,
       'uri_scheme' => 'public',
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'image',
