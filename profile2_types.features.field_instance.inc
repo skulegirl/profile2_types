@@ -818,13 +818,7 @@ Please do not check this option if you are simply going to be away and unavailab
   // Exported field_instance: 'profile2-boondocking_available-field_ba_local_attractions'
   $field_instances['profile2-boondocking_available-field_ba_local_attractions'] = array(
     'bundle' => 'boondocking_available',
-    'default_value' => array(
-      0 => array(
-        'value' => '',
-        'format' => 1,
-        '_error_element' => 'default_value_widget][field_ba_local_attractions][0][value',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Optionally, include a list of local attractions that might be of interest to guests staying at your place.',
     'display' => array(
@@ -879,6 +873,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_ba_local_attractions',
     'label' => 'Suggested Local Attractions',
     'required' => 0,
@@ -889,12 +884,10 @@ Please do not check this option if you are simply going to be away and unavailab
     ),
     'weight' => 11,
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'default_value_php' => NULL,
         'rows' => 5,
-        'size' => 60,
       ),
       'type' => 'text_textarea',
       'weight' => 6,
@@ -1575,12 +1568,7 @@ Please do not check this option if you are simply going to be away and unavailab
   // Exported field_instance: 'profile2-boondocking_available-field_ba_why_no_bda'
   $field_instances['profile2-boondocking_available-field_ba_why_no_bda'] = array(
     'bundle' => 'boondocking_available',
-    'default_value' => array(
-      0 => array(
-        'value' => '',
-        '_error_element' => 'default_value_widget][field_ba_why_no_bda][0][value',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Can\'t offer a location? That\'s okay but some host members like to know why. e.g.. live in an apartment, no parking space, full time RVer, city ordinance, etc.',
     'display' => array(
@@ -1635,6 +1623,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_ba_why_no_bda',
     'label' => 'Why you can\'t offer a boondocking location',
     'required' => 0,
@@ -1645,12 +1634,10 @@ Please do not check this option if you are simply going to be away and unavailab
     ),
     'weight' => -3,
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'default_value_php' => NULL,
         'rows' => 5,
-        'size' => 60,
       ),
       'type' => 'text_textarea',
       'weight' => 1,
@@ -2045,12 +2032,7 @@ Please do not check this option if you are simply going to be away and unavailab
   // Exported field_instance: 'profile2-profile-field_hometown'
   $field_instances['profile2-profile-field_hometown'] = array(
     'bundle' => 'profile',
-    'default_value' => array(
-      0 => array(
-        'value' => '',
-        '_error_element' => 'default_value_widget][field_hometown][0][value',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'If you are not offering a boondocking location yourself, please let other members know where you\'re from.',
     'display' => array(
@@ -2105,6 +2087,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_hometown',
     'label' => 'Your Home Town',
     'required' => 0,
@@ -2115,12 +2098,10 @@ Please do not check this option if you are simply going to be away and unavailab
     ),
     'weight' => 5,
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'default_value_php' => NULL,
         'rows' => 5,
-        'size' => 60,
       ),
       'type' => 'text_textarea',
       'weight' => 6,
@@ -2212,12 +2193,7 @@ Please do not check this option if you are simply going to be away and unavailab
   // Exported field_instance: 'profile2-profile-field_skills_to_share'
   $field_instances['profile2-profile-field_skills_to_share'] = array(
     'bundle' => 'profile',
-    'default_value' => array(
-      0 => array(
-        'value' => '',
-        '_error_element' => 'default_value_widget][field_skills_to_share][0][value',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Do you have any skills or expertise that you could share with fellow boondockers? Good with a mechanics wrench? Computer skills? An amazing cook? Let the world know!',
     'display' => array(
@@ -2272,6 +2248,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_skills_to_share',
     'label' => 'Skills or Expertise to Share',
     'required' => 0,
@@ -2282,12 +2259,10 @@ Please do not check this option if you are simply going to be away and unavailab
     ),
     'weight' => 6,
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'default_value_php' => NULL,
         'rows' => 5,
-        'size' => 60,
       ),
       'type' => 'text_textarea',
       'weight' => 7,
@@ -2381,12 +2356,7 @@ Please do not check this option if you are simply going to be away and unavailab
   // Exported field_instance: 'profile2-profile-field_user_fav_boond_locs'
   $field_instances['profile2-profile-field_user_fav_boond_locs'] = array(
     'bundle' => 'profile',
-    'default_value' => array(
-      0 => array(
-        'value' => '',
-        '_error_element' => 'default_value_widget][field_user_fav_boond_locs][0][value',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Tell us about some of your favorite boondocking locations, or just general locations that you like to travel with your RV.',
     'display' => array(
@@ -2441,6 +2411,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_user_fav_boond_locs',
     'label' => 'Favorite Boondocking Locations',
     'required' => 0,
@@ -2451,12 +2422,10 @@ Please do not check this option if you are simply going to be away and unavailab
     ),
     'weight' => 4,
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'default_value_php' => NULL,
         'rows' => 5,
-        'size' => 60,
       ),
       'type' => 'text_textarea',
       'weight' => 5,
@@ -2631,12 +2600,7 @@ Please do not check this option if you are simply going to be away and unavailab
   // Exported field_instance: 'profile2-profile-field_user_your_pets'
   $field_instances['profile2-profile-field_user_your_pets'] = array(
     'bundle' => 'profile',
-    'default_value' => array(
-      0 => array(
-        'value' => '',
-        '_error_element' => 'default_value_widget][field_user_your_pets][0][value',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Do you travel with pets? Tell us about them!',
     'display' => array(
@@ -2691,6 +2655,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_user_your_pets',
     'label' => 'Your Pets',
     'required' => 0,
@@ -2701,12 +2666,10 @@ Please do not check this option if you are simply going to be away and unavailab
     ),
     'weight' => 7,
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'default_value_php' => NULL,
         'rows' => 5,
-        'size' => 60,
       ),
       'type' => 'text_textarea',
       'weight' => 8,
@@ -2845,12 +2808,7 @@ Please do not check this option if you are simply going to be away and unavailab
   // Exported field_instance: 'profile2-profile-field_user_your_rig'
   $field_instances['profile2-profile-field_user_your_rig'] = array(
     'bundle' => 'profile',
-    'default_value' => array(
-      0 => array(
-        'value' => '',
-        '_error_element' => 'default_value_widget][field_user_your_rig][0][value',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Tell us about the RV you drive. What class? How old is it? Do you have slide-outs? Any funky decorations?',
     'display' => array(
@@ -2905,6 +2863,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_user_your_rig',
     'label' => 'Your Rig',
     'required' => 0,
@@ -2915,12 +2874,10 @@ Please do not check this option if you are simply going to be away and unavailab
     ),
     'weight' => 3,
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'default_value_php' => NULL,
         'rows' => 5,
-        'size' => 60,
       ),
       'type' => 'text_textarea',
       'weight' => 4,
