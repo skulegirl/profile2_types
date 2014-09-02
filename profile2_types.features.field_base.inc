@@ -135,40 +135,6 @@ function profile2_types_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_affiliate_tos'
-  $field_bases['field_affiliate_tos'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_affiliate_tos',
-    'foreign keys' => array(),
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        1 => 'I agree to the <a href="/affiliate-terms-of-service" target="_blank">affiliate terms of service</a>',
-      ),
-      'allowed_values_function' => '',
-      'allowed_values_php' => '',
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'profile2_private' => 0,
-      'suffix' => '',
-      'views_base_columns' => array(),
-      'views_base_table' => 0,
-    ),
-    'translatable' => 0,
-    'type' => 'list_integer',
-    'type_name' => 'affiliate_info',
-  );
-
   // Exported field_base: 'field_affiliate_website_url'
   $field_bases['field_affiliate_website_url'] = array(
     'active' => 1,

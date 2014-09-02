@@ -24,7 +24,6 @@ features[field_base][] = field_affiliate_comments
 features[field_base][] = field_affiliate_first_name
 features[field_base][] = field_affiliate_paypal_email
 features[field_base][] = field_affiliate_terms_of_service
-features[field_base][] = field_affiliate_tos
 features[field_base][] = field_affiliate_website_url
 features[field_base][] = field_ba_access_road_conditions
 features[field_base][] = field_ba_availability
