@@ -617,6 +617,8 @@ If you do not have a website, leave this blank, but please explain in the "comme
         'value' => 0,
       ),
     ),
+    'default_value_function' => '',
+    'default_value_php' => '',
     'deleted' => 0,
     'description' => 'Providing boondocking means that you will be more likely to find others who will let you boondock on their property. However, if do not have a location to offer at this time, checking this box will keep you from being brought back to this screen every time you log in. 
 Please do not check this option if you are simply going to be away and unavailable for a period of time. Instead, indicate good times for people to visit in the "Availability" field below.',
@@ -630,6 +632,7 @@ Please do not check this option if you are simply going to be away and unavailab
       ),
     ),
     'entity_type' => 'profile2',
+    'exclude_cv' => 0,
     'field_name' => 'field_ba_bda_pref',
     'label' => 'Do you have a boondocking location available on your property?',
     'required' => 1,
@@ -733,6 +736,38 @@ Please do not check this option if you are simply going to be away and unavailab
       'weight' => 2,
     ),
     'widget_type' => 'text_textarea',
+  );
+
+  // Exported field_instance: 'profile2-boondocking_available-field_ba_electric_hookup_compute'
+  $field_instances['profile2-boondocking_available-field_ba_electric_hookup_compute'] = array(
+    'bundle' => 'boondocking_available',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_plain',
+        'weight' => 18,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'exclude_cv' => 0,
+    'field_name' => 'field_ba_electric_hookup_compute',
+    'label' => 'ba_electric_hookup_computed',
+    'required' => 0,
+    'settings' => array(
+      'exclude_cv' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'computed_field',
+      'settings' => array(),
+      'type' => 'computed',
+      'weight' => 32,
+    ),
   );
 
   // Exported field_instance: 'profile2-boondocking_available-field_ba_hookups'
@@ -1565,6 +1600,38 @@ Please do not check this option if you are simply going to be away and unavailab
     'widget_type' => 'optionwidgets_select',
   );
 
+  // Exported field_instance: 'profile2-boondocking_available-field_ba_water_hookup_computed'
+  $field_instances['profile2-boondocking_available-field_ba_water_hookup_computed'] = array(
+    'bundle' => 'boondocking_available',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_plain',
+        'weight' => 19,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'exclude_cv' => 0,
+    'field_name' => 'field_ba_water_hookup_computed',
+    'label' => 'ba_water_hookup_computed',
+    'required' => 0,
+    'settings' => array(
+      'exclude_cv' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'computed_field',
+      'settings' => array(),
+      'type' => 'computed',
+      'weight' => 33,
+    ),
+  );
+
   // Exported field_instance: 'profile2-boondocking_available-field_ba_why_no_bda'
   $field_instances['profile2-boondocking_available-field_ba_why_no_bda'] = array(
     'bundle' => 'boondocking_available',
@@ -1629,7 +1696,7 @@ Please do not check this option if you are simply going to be away and unavailab
     'required' => 0,
     'settings' => array(
       'exclude_cv' => FALSE,
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'weight' => -3,
@@ -2029,6 +2096,160 @@ Please do not check this option if you are simply going to be away and unavailab
     'widget_type' => 'optionwidgets_select',
   );
 
+  // Exported field_instance: 'profile2-profile-field_escapee_member'
+  $field_instances['profile2-profile-field_escapee_member'] = array(
+    'bundle' => 'profile',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'default_value_function' => '',
+    'default_value_php' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 16,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'exclude_cv' => 0,
+    'field_name' => 'field_escapee_member',
+    'label' => 'Escapee Member',
+    'required' => 0,
+    'settings' => array(
+      'exclude_cv' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 33,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-profile-field_escapee_member_data'
+  $field_instances['profile2-profile-field_escapee_member_data'] = array(
+    'bundle' => 'profile',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 20,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'exclude_cv' => 0,
+    'field_name' => 'field_escapee_member_data',
+    'label' => 'SKP Membership Number',
+    'required' => 0,
+    'settings' => array(
+      'exclude_cv' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 34,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-profile-field_fmca_member'
+  $field_instances['profile2-profile-field_fmca_member'] = array(
+    'bundle' => 'profile',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'default_value_function' => '',
+    'default_value_php' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 22,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'exclude_cv' => 0,
+    'field_name' => 'field_fmca_member',
+    'label' => 'FMCA Member',
+    'required' => 0,
+    'settings' => array(
+      'exclude_cv' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 37,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-profile-field_fmca_member_data'
+  $field_instances['profile2-profile-field_fmca_member_data'] = array(
+    'bundle' => 'profile',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 23,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'exclude_cv' => 0,
+    'field_name' => 'field_fmca_member_data',
+    'label' => 'FMCA Membership Number',
+    'required' => 0,
+    'settings' => array(
+      'exclude_cv' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 38,
+    ),
+  );
+
   // Exported field_instance: 'profile2-profile-field_hometown'
   $field_instances['profile2-profile-field_hometown'] = array(
     'bundle' => 'profile',
@@ -2187,6 +2408,83 @@ Please do not check this option if you are simply going to be away and unavailab
       'settings' => array(),
       'type' => 'markup',
       'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-profile-field_rvillage_member'
+  $field_instances['profile2-profile-field_rvillage_member'] = array(
+    'bundle' => 'profile',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'default_value_function' => '',
+    'default_value_php' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 17,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'exclude_cv' => 0,
+    'field_name' => 'field_rvillage_member',
+    'label' => 'RVillage Member',
+    'required' => 0,
+    'settings' => array(
+      'exclude_cv' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 35,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-profile-field_rvillage_member_data'
+  $field_instances['profile2-profile-field_rvillage_member_data'] = array(
+    'bundle' => 'profile',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 21,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'exclude_cv' => 0,
+    'field_name' => 'field_rvillage_member_data',
+    'label' => 'RVillage User Name',
+    'required' => 0,
+    'settings' => array(
+      'exclude_cv' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 36,
     ),
   );
 
@@ -3031,6 +3329,9 @@ Please do not check this option if you are simply going to be away and unavailab
   t('Do you travel with pets? Tell us about them!');
   t('Enter the email address associated with the paypal account through which you wish to be paid.');
   t('Enter the number of guests\' RVs you can accommodate on your property If you do not have any spots available, please check the "I prefer to not provide boondocking at this time" checkbox at the top of this page. ');
+  t('Escapee Member');
+  t('FMCA Member');
+  t('FMCA Membership Number');
   t('Favorite Boondocking Locations');
   t('Generators Allowed');
   t('Give a brief description of yourself for others to see.');
@@ -3056,6 +3357,9 @@ Please do not check this option if you are simply going to be away and unavailab
   t('Providing boondocking means that you will be more likely to find others who will let you boondock on their property. However, if do not have a location to offer at this time, checking this box will keep you from being brought back to this screen every time you log in. 
 Please do not check this option if you are simply going to be away and unavailable for a period of time. Instead, indicate good times for people to visit in the "Availability" field below.');
   t('Pull Through Parking Available');
+  t('RVillage Member');
+  t('RVillage User Name');
+  t('SKP Membership Number');
   t('Skills or Expertise to Share');
   t('Slideouts/Awnings Allowed');
   t('Suggested Local Attractions');
@@ -3083,6 +3387,8 @@ If you do not have a website, leave this blank, but please explain in the "comme
   t('Your Rig');
   t('Your Rig Photo');
   t('affiliate website');
+  t('ba_electric_hookup_computed');
+  t('ba_water_hookup_computed');
   t('comments');
   t('intro_text');
   t('paypal account email address');

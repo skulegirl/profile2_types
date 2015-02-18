@@ -52,17 +52,17 @@ function profile2_types_field_group_info() {
     'label' => 'Details',
     'weight' => '4',
     'children' => array(
-      0 => 'field_ba_access_road_conditions',
-      1 => 'field_ba_availability',
-      2 => 'field_ba_hookups',
-      3 => 'field_ba_max_nights',
-      4 => 'field_ba_max_rv_length_int',
-      5 => 'field_ba_number_of_spots',
-      6 => 'field_ba_pets_welcome',
-      7 => 'field_ba_pullthrough_spot',
-      8 => 'field_ba_slideout_awning',
-      9 => 'field_ba_wifi_available',
-      10 => 'field_barbecues_allowed',
+      0 => 'field_barbecues_allowed',
+      1 => 'field_ba_access_road_conditions',
+      2 => 'field_ba_availability',
+      3 => 'field_ba_hookups',
+      4 => 'field_ba_max_nights',
+      5 => 'field_ba_max_rv_length_int',
+      6 => 'field_ba_number_of_spots',
+      7 => 'field_ba_pets_welcome',
+      8 => 'field_ba_pullthrough_spot',
+      9 => 'field_ba_slideout_awning',
+      10 => 'field_ba_wifi_available',
       11 => 'field_generators_allowed',
       12 => 'field_lawn_chairs_allowed',
     ),
@@ -120,6 +120,39 @@ function profile2_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_memberships|profile2|profile|form';
+  $field_group->group_name = 'group_memberships';
+  $field_group->entity_type = 'profile2';
+  $field_group->bundle = 'profile';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Your Groups',
+    'weight' => '33',
+    'children' => array(
+      0 => 'field_escapee_member',
+      1 => 'field_rvillage_member',
+      2 => 'field_escapee_member_data',
+      3 => 'field_rvillage_member_data',
+      4 => 'field_fmca_member',
+      5 => 'field_fmca_member_data',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Your Groups',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'classes' => '',
+        'description' => '',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_memberships|profile2|profile|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_payment_information|profile2|affiliate_info|form';
   $field_group->group_name = 'group_payment_information';
   $field_group->entity_type = 'profile2';
@@ -157,12 +190,12 @@ function profile2_types_field_group_info() {
     'label' => 'All About You',
     'weight' => '3',
     'children' => array(
-      0 => 'field_user_age_range',
-      1 => 'field_user_fav_boond_locs',
-      2 => 'field_skills_to_share',
-      3 => 'field_user_photo',
-      4 => 'field_user_your_pets',
-      5 => 'field_hometown',
+      0 => 'field_hometown',
+      1 => 'field_skills_to_share',
+      2 => 'field_user_age_range',
+      3 => 'field_user_fav_boond_locs',
+      4 => 'field_user_photo',
+      5 => 'field_user_your_pets',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

@@ -260,7 +260,8 @@ function profile2_types_field_default_field_bases() {
         1 => 'I cannot provide a boondocking location.',
       ),
       'allowed_values_function' => '',
-      'profile2_private' => FALSE,
+      'allowed_values_php' => '',
+      'profile2_private' => 0,
       'views_base_columns' => array(),
       'views_base_table' => 0,
     ),
@@ -301,6 +302,42 @@ function profile2_types_field_default_field_bases() {
     'translatable' => 0,
     'type' => 'text_long',
     'type_name' => 'boondocking_available',
+  );
+
+  // Exported field_base: 'field_ba_electric_hookup_compute'
+  $field_bases['field_ba_electric_hookup_compute'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_ba_electric_hookup_compute',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'computed_field',
+    'settings' => array(
+      'code' => '$entity_field[0][\'value\'] = "";',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 0,
+        'data_length' => 32,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'varchar',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
+      'profile2_private' => 0,
+      'store' => 1,
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'computed',
   );
 
   // Exported field_base: 'field_ba_hookups'
@@ -628,6 +665,42 @@ function profile2_types_field_default_field_bases() {
     'type_name' => 'boondocking_available',
   );
 
+  // Exported field_base: 'field_ba_water_hookup_computed'
+  $field_bases['field_ba_water_hookup_computed'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_ba_water_hookup_computed',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'computed_field',
+    'settings' => array(
+      'code' => '$entity_field[0][\'value\'] = "";',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 0,
+        'data_length' => 32,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'varchar',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
+      'profile2_private' => 0,
+      'store' => 1,
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'computed',
+  );
+
   // Exported field_base: 'field_ba_why_no_bda'
   $field_bases['field_ba_why_no_bda'] = array(
     'active' => 1,
@@ -817,6 +890,142 @@ function profile2_types_field_default_field_bases() {
     'translatable' => 0,
     'type' => 'location',
     'type_name' => 'boondocking_available',
+  );
+
+  // Exported field_base: 'field_escapee_member'
+  $field_bases['field_escapee_member'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_escapee_member',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+      'allowed_values_php' => '',
+      'profile2_private' => 0,
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
+  );
+
+  // Exported field_base: 'field_escapee_member_data'
+  $field_bases['field_escapee_member_data'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_escapee_member_data',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+      'profile2_private' => 0,
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_fmca_member'
+  $field_bases['field_fmca_member'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_fmca_member',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+      'allowed_values_php' => '',
+      'profile2_private' => 0,
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
+  );
+
+  // Exported field_base: 'field_fmca_member_data'
+  $field_bases['field_fmca_member_data'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_fmca_member_data',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+      'profile2_private' => 0,
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_generators_allowed'
@@ -1048,6 +1257,74 @@ Note that changes will only take effect after clicking the "Save" button at the 
     ),
     'translatable' => 0,
     'type' => 'markup',
+  );
+
+  // Exported field_base: 'field_rvillage_member'
+  $field_bases['field_rvillage_member'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_rvillage_member',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+      'allowed_values_php' => '',
+      'profile2_private' => 0,
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
+  );
+
+  // Exported field_base: 'field_rvillage_member_data'
+  $field_bases['field_rvillage_member_data'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_rvillage_member_data',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+      'profile2_private' => 0,
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_skills_to_share'
